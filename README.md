@@ -1,2 +1,3 @@
 # responsive-design-samples
-Responsive Design samples
+
+Support for my responsive design presentation:  http://slides.com/benbraou/responsive-design#/
