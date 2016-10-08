@@ -1,0 +1,66 @@
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ede7f6;
+    padding-top: 60px;
+}
+
+.header__content {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: #5e35b1;
+    color: #fff;
+    padding: 15px 10px;
+    font-size: 2rem;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .20);
+}
+
+.main-content {
+    padding: 0 10px;
+}
+
+
+/* ======================== Colors  ============================= */
+
+.deep-purple {
+    background-color: #673ab7;
+    color: #fff;
+}
+
+.deep-purple--lighten-2 {
+    background-color: #9575cd;
+    color: #fff;
+}
+
+.deep-purple--lighten-4 {
+    background-color: #d1c4e9;
+    color: #000;
+}
+
+
+/* ====================== Card style ========================== */
+
+.card {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .20);
+    margin: 0.5rem 0 1rem 0;
+    padding: 10px;
+    background-color: #fff;
+    transition: box-shadow .25s;
+}
+
+.card__header {
+    font-size: 24px;
+}
+
+.card__body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
