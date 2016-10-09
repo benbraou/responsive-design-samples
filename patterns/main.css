@@ -5,7 +5,7 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #ede7f6;
-    padding-top: 60px;
+    padding-top: 70px;
 }
 
 .header__content {
@@ -55,6 +55,7 @@ body {
 
 .card__header {
     font-size: 24px;
+    color: #9575cd;
 }
 
 .card__body {
@@ -64,3 +65,51 @@ body {
 }
 
 
+/* ====================== Column drop ========================== */
+
+
+/* Mobile first */
+
+.column-drop-col--main, .column-drop-col--secondary-1, .column-drop-col--secondary-2 {
+    box-sizing: border-box;
+    padding: 1rem;
+    width: 100%;
+}
+
+
+/* Medium size screens */
+
+@media (min-width: 768px) {
+    .column-drop-col--main {
+        width: 60%;
+        order: 2;
+    }
+    .column-drop-col--secondary-1 {
+        width: 40%;
+        order: 1;
+    }
+    .column-drop-col--secondary-2 {
+        width: 100%;
+        order: 3;
+    }
+}
+
+
+/* Medium size screens */
+
+@media (min-width: 1024px) {
+    .column-drop-col--main {
+        width: 60%;
+        order: 2;
+    }
+    .column-drop-col--secondary-1 {
+        width: 20%;
+        order: 1;
+    }
+    .column-drop-col--secondary-2 {
+        width: 20%;
+        order: 3;
+    }
+}
+
+/* ====================== Mostly fluid ========================== */
