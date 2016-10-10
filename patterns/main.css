@@ -58,14 +58,16 @@ body {
     color: #9575cd;
 }
 
-.card__body {
+.card__body {}
+
+
+/* ====================== Column drop ========================== */
+
+.column-drop-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
-
-
-/* ====================== Column drop ========================== */
 
 
 /* Mobile first */
@@ -112,4 +114,44 @@ body {
     }
 }
 
+
 /* ====================== Mostly fluid ========================== */
+
+.mostly-fluid-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+/* Mobile first */
+
+.mostly-fluid-col--main, .mostly-fluid-col--secondary-1, .mostly-fluid-col--secondary-2 {
+    box-sizing: border-box;
+    padding: 1rem;
+    width: 100%;
+}
+
+
+/* Medium size screens */
+
+@media (min-width: 768px) {
+    .mostly-fluid-container {
+        width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mostly-fluid-col--main {
+        width: 60%;
+        order: 2;
+    }
+    .mostly-fluid-col--secondary-1 {
+        width: 40%;
+        order: 1;
+    }
+    .mostly-fluid-col--secondary-2 {
+        width: 100%;
+        order: 3;
+    }
+}
