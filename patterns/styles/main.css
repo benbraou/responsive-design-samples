@@ -8,6 +8,18 @@ body {
     padding-top: 70px;
 }
 
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
 .header__content {
     position: fixed;
     top: 0;
@@ -54,7 +66,7 @@ body {
 }
 
 .card__header {
-    font-size: 24px;
+    padding: 0px 0px 10px 0px;
     color: #9575cd;
 }
 
@@ -154,4 +166,34 @@ body {
         width: 100%;
         order: 3;
     }
+}
+
+
+/* ====================== Layout shifter ========================== */
+
+.layout-shifter-container >header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.layout-shifter-container >header >nav a {
+    display: block;
+    padding: 4px 0 0 44px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.layout-shifter-container >header >nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.layout-shifter-container >header >nav ul li {
+    list-style: none;
+    display: inline-block;
+    text-align: center;
 }
