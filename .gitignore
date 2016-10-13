@@ -1,1 +1,5 @@
 /.vscode/
+/node_modules/
+/layout-patterns/yarn.lock
+/layout-patterns/node_modules/
+

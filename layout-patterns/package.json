@@ -1,0 +1,11 @@
+{
+  "name": "layout-patterns",
+  "version": "0.1.0",
+  "description": "layout patterns demonstrated with flex display",
+  "main": "index.js",
+  "author": "Oussama Ben Brahim",
+  "license": "MIT",
+  "dependencies": {
+    "webcomponents.js": "^0.7.22"
+  }
+}
