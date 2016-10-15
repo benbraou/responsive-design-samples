@@ -13,6 +13,7 @@
 	<script src="node_modules/webcomponents.js/webcomponents.js"></script>
 	<link rel="import" href="templates/column-drop.html">
 	<link rel="import" href="templates/mostly-fluid.html">
+	<link rel="import" href="templates/layout-shifter.html">
 </head>
 
 <body>
@@ -29,24 +30,26 @@
 			<div data-import="templates/mostly-fluid.html">
 				Mostly fluid example
 			</div>
+			<div data-import="templates/layout-shifter.html">
+				Layout shifter example
+			</div>
 		</div>
 	</div>
 	<script>
-		window.addEventListener('WebComponentsReady', function(e) {
-		var partialElements = document.querySelectorAll("[data-import]");
-		Array.prototype.forEach.call(partialElements, function (el) {
-			var importValue = el.dataset.import;
-			// template literals is not supported in IE
-			var selectorValue = "link[href='" + importValue + "']";
-			var importLink = document.querySelector(selectorValue);
-			if (importLink && importLink.import){
-				var template = importLink.import.querySelector('template');
-				var clone = document.importNode(template.content, true);
-				el.parentNode.replaceChild(clone, el);
-			}
-		});
-});
-
+		window.addEventListener('WebComponentsReady', function (e) {
+			var partialElements = document.querySelectorAll("[data-import]");
+			Array.prototype.forEach.call(partialElements, function (el) {
+				var importValue = el.dataset.import;
+				// template literals is not supported in IE
+				var selectorValue = "link[href='" + importValue + "']";
+				var importLink = document.querySelector(selectorValue);
+				if (importLink && importLink.import) {
+					var template = importLink.import.querySelector('template');
+					var clone = document.importNode(template.content, true);
+					el.parentNode.replaceChild(clone, el);
+				}
+			});
+		});	
 	</script>
 </body>
 

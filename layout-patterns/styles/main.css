@@ -171,18 +171,43 @@ h3 {
 
 /* ====================== Layout shifter ========================== */
 
+.layout-shifter-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.layout-shifter-content {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.layout-shifter-content__main, .layout-shifter-content__secondary {
+    box-sizing: border-box;
+    padding: 1rem;
+    width: 100%;
+}
+
 .layout-shifter-container >header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    box-sizing: border-box;
+    width: 100%;
 }
 
-.layout-shifter-container >header >nav a {
-    display: block;
-    padding: 4px 0 0 44px;
-    color: #fff;
-    text-decoration: none;
+.layout-shifter-container >header >h1 {
+    font-size: 2rem;
+    padding-bottom: 7px;
+    order: 1;
+    width: 100%;
+    text-align: center;
+}
+
+.layout-shifter-container >header >nav {
+    padding: 10px 0px 5px 5px;
 }
 
 .layout-shifter-container >header >nav ul {
@@ -195,5 +220,58 @@ h3 {
 .layout-shifter-container >header >nav ul li {
     list-style: none;
     display: inline-block;
-    text-align: center;
+}
+
+.layout-shifter-container >header >nav a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding-right: 15px;
+}
+
+
+/* Mobile first */
+
+@media (min-width: 550px) {
+    .layout-shifter-container >header {
+        padding: 10px 0px 10px 5px;
+        flex-wrap: nowrap;
+    }
+    .layout-shifter-container >header >h1 {
+        padding: 0px;
+        order: 1;
+        width: 40%;
+        text-align: left;
+    }
+    .layout-shifter-container >header >nav {
+        padding: 0px;
+        order: 2;
+    }
+    .layout-shifter-container >header >nav ul {
+        flex-wrap: nowrap;
+    }
+}
+
+@media (min-width: 768px) {
+    .layout-shifter-container >header {
+        padding: 10px 0px 10px 5px;
+        flex-wrap: wrap;
+        width: 27%;
+    }
+    .layout-shifter-content {
+        width: 73%;
+    }
+    .layout-shifter-container >header >h1 {
+        width: 100%;
+    }
+    .layout-shifter-container >header >nav {
+        padding-top: 10px;
+        order: 2;
+    }
+    .layout-shifter-container >header >nav ul {
+        flex-direction: column;
+    }
+    .layout-shifter-container >header >nav a {
+        padding-top: 10px;
+    }
 }
