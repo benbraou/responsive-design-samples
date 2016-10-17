@@ -1,0 +1,41 @@
+<template>
+	<div class="card">
+		<h2 class="card__header"> Off canvas</h2>
+		<div class="card__body">
+			<div class="off-canvas-container deep-purple--lighten-4" onclick="updateMenuDisplay(false)">
+				<div class="off-canvas-col--menu-mobile deep-purple" onclick="event.stopPropagation();">
+				</div>
+				<div class="off-canvas-col--main">
+					<div class="off-canvas-col--main_menu-large">
+						<ul>
+							<li>
+								<a href="javascript:;">Menu item a</a>
+							</li>
+							<li>
+								<a href="javascript:;">Menu item b</a>
+							</li>
+							<li>
+								<a href="javascript:;">Menu item c</a>
+							</li>
+						</ul>
+					</div>
+					<div class="off-canvas-col--main_menu-activator" onclick="event.stopPropagation();updateMenuDisplay(true)"></div>
+					<div class="off-canvas-col--main_content">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam semper fermentum magna, in convallis lacus sollicitudin at.
+						Donec aliquam consectetur sem, sed malesuada risus commodo at.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+<script>	  
+  function updateMenuDisplay(doExpand){
+    var menuElt = document.querySelector('.off-canvas-col--menu-mobile');
+    if (doExpand){
+      menuElt.classList.add("expanded");
+    }else{
+      menuElt.classList.remove("expanded");
+    }
+  }
+</script>
