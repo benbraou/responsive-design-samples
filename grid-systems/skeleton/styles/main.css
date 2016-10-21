@@ -1,0 +1,19 @@
+.container {
+  max-width: 1000px;
+}
+
+.logo {
+  min-height: 80px;
+}
+
+img {
+  max-width: 50%;
+  display: block;
+  text-align: center;
+  margin: 2.5rem auto 0;
+}
+
+header {
+  margin-top: 2rem;
+  text-align: center;
+}
