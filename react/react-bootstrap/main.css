@@ -1,0 +1,30 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5em;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#main {
+  padding: 2rem;
+}
+
+.title {
+  text-align: center;
+}
+
+code{
+  color: #000;
+}
+
+.show-grid [class*="col-"] {
+  padding: 10px 0px ; 
+  margin-bottom: 10px;
+  text-align: center;
+  background-color:lightgrey;
+  border: 1px solid #000;
+}
