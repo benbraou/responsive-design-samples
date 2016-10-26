@@ -1,0 +1,42 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5em;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#main {
+  padding: 2rem;
+}
+
+.title {
+  text-align: center;
+}
+
+.mq-message {
+  padding: 10px 0px;
+  margin-bottom: 10px;
+  text-align: center;
+  border: 1px solid #000;
+}
+
+/* ======================== Colors  ============================= */
+
+.deep-purple {
+    background-color: #673ab7;
+    color: #fff;
+}
+
+.deep-purple--lighten-2 {
+    background-color: #9575cd;
+    color: #fff;
+}
+
+.deep-purple--lighten-4 {
+    background-color: #d1c4e9;
+    color: #000;
+}
