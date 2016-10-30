@@ -5,9 +5,13 @@
   "main": "index.js",
   "scripts": {
     "build-styles": "node-sass --include-path styles styles/main.scss public/styles/main.css",
+    "build-styles:watch": "node-sass --include-path styles styles/main.scss public/styles/main.css -w",
     "build-pug": "pug index.pug -P -o public",
+    "build-pug:watch": "pug index.pug -P -o public -w",
     "build": "npm run build-pug && npm run build-styles",
-    "start": "http-server ./public -p 3000"
+    "build:watch": "npm run build-pug:watch && npm run build-styles:watch",
+    "start-server": "http-server ./public -p 3000 -c-1",
+    "dev": " concurrently 'npm run build:watch' 'npm run start-server'"
   },
   "author": "Oussama Ben Brahim",
   "license": "MIT",
@@ -16,6 +20,7 @@
     "http-server": "^0.9.0"
   },
   "dependencies": {
+    "concurrently": "^3.1.0",
     "pug-cli": "^1.0.0-alpha6"
   }
 }

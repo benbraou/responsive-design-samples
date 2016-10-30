@@ -5,12 +5,10 @@
 ```
 npm install
 ```
-- Compile sass styles and pug templates into public directory
+- Compile sass styles, compile pug templates into public directory in watch mode and start server in port 3000 
 ```
-npm run build
+npm run dev
 ```
-- Run http-server on port 3000
-```
-npm start
-```
+
 - Go to http://localhost:3000/
+- Make some changes in the project and refresh the page to see them
