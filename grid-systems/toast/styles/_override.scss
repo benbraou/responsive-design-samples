@@ -1,0 +1,21 @@
+// default is $toast-grid-namespace: "grid"
+$toast-grid-namespace: "row";
+
+// default is $toast-grid-column-namespace: "grid__col"
+$toast-grid-column-namespace: "col";
+
+// default is $toast-col-groups: (2, 3, 4, 5, 6, 8, 12)
+$toast-col-groups: (4, 12, 16);
+
+// default is $toast-gutter-width: 20px
+$toast-gutter-width: 10px;
+
+// default is toast-breakpoint-medium: 720px 
+$toast-breakpoint-medium: 720px;
+
+// default is toast-breakpoint-small: 480px 
+$toast-breakpoint-small: 500px;
+
+.#{$toast-grid-namespace} {
+  margin-bottom: 10px;
+}
