@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-styles": "node-sass --include-path styles styles/main.scss public/styles/main.css",
-    "build-styles:watch": "node-sass --include-path styles styles/main.scss public/styles/main.css -w",
+    "build-styles":"node-sass styles/main.scss -o public/styles/",
+    "build-styles:watch": "node-sass styles/main.scss -o public/styles/ --watch styles",
     "build-pug": "pug index.pug -P -o public",
     "build-pug:watch": "pug index.pug -P -o public -w",
     "build": "npm run build-pug && npm run build-styles",
-    "build:watch": "npm run build-pug:watch && npm run build-styles:watch",
+    "build:watch": "concurrently 'npm run build-pug:watch' 'npm run build-styles' 'npm run build-styles:watch'",
     "start-server": "http-server ./public -p 3000 -c-1",
     "dev": " concurrently 'npm run build:watch' 'npm run start-server'"
   },
