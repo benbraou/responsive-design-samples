@@ -1,0 +1,21 @@
+{
+  "name": "toast",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-styles": "node-sass --include-path styles styles/main.scss public/styles/main.css",
+    "build-pug": "pug index.pug -P -o public",
+    "build": "npm run build-pug && npm run build-styles",
+    "start": "http-server ./public -p 3000"
+  },
+  "author": "Oussama Ben Brahim",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^3.10.1",
+    "http-server": "^0.9.0"
+  },
+  "dependencies": {
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}
